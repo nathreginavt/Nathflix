@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/favicon" href="img/netflixicone.png">
+  <meta name="viewport" content="width=device-width">
+  <title>Nathflix</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <nav id="nav">
+    <div>
+      <img class="nav_logo" src="img/netflixlogo.png" alt="logo netflix" />
+    </div>
+
+    <div id="navButtons">
+      <p>Filmes</p>
+      <p>Séries</p>
+      <p>Categorias</p>
+      <p>Minha Lista</p>
+      <img id="nav_avatar" src="img/netflixavatar1.png" alt="avatar netflix" onclick=abrirPerfis() />      
+      <div id="navPerfis" style="display:none; color:white">
+        <ul> 
+          <li onclick=trocarPerfil(1)>Smile</li>
+          <li onclick=trocarPerfil(2)>Penguin</li>
+          <li onclick=trocarPerfil(3)>Panda</li>
+        </ul>
+      </div>
+    </div>    
+  </nav>
+
+  <header id="banner">
+    <div id="banner_contents">
+
+      <h1 id="banner_title">Heartstopper</h1>
+      <div id="banner_buttons">
+        <button class="banner_button">Assistir</button>
+        <button class="banner_button">Minha Lista</button>
+      </div>
+
+      <h1 id="banner_description">
+        Nesta série sobre amadurecimento, os adolescentes Charlie e Nick descobrem que são mais que apenas amigos e
+        precisam lidar com as dificuldades da vida escolar e amorosa.
+      </h1>
+    </div>
+    <div id="banner_fadeBottom"></div>
+  </header>
+
+  <main>
+    <section class="row" id="row1">
+      <h2>ORIGINAIS NETFLIX</h2>
+      <div class="scroll-left" onclick="scrollRow('row1', 'left')">❮</div>
+      <div class="row_posters">
+        <img class="row_poster row_posterLarge" src="img/large-movie1.jpg" alt=""/>
+        <img class="row_poster row_posterLarge" src="img/large-movie2.jpg" alt=""/>
+        <img class="row_poster row_posterLarge" src="img/large-movie3.jpg" alt=""/>
+        <img class="row_poster row_posterLarge" src="img/large-movie4.jpg" alt=""/>
+        <img class="row_poster row_posterLarge" src="img/large-movie5.jpg" alt=""/>
+        <img class="row_poster row_posterLarge" src="img/large-movie6.png" alt=""/>
+        <img class="row_poster row_posterLarge" src="img/large-movie7.jpg" alt=""/>
+        <img class="row_poster row_posterLarge" src="img/large-movie8.jpg" alt=""/> 
+      </div> 
+      <div class="scroll-right" onclick="scrollRow('row1', 'right')">❯</div>
+    </section>
+
+    <section class="row" id="row2">
+      <h2>Doramas</h2>
+      <div class="scroll-left" onclick="scrollRow('row2', 'left')">❮</div>
+      <div class="row_posters">
+        <img class="row_poster" src="img/small-movie1.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie2.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie3.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie4.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie5.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie6.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie7.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie8.jpg" alt=""/>
+      </div>
+      <div class="scroll-right" onclick="scrollRow('row2', 'right')">❯</div>
+    </section>
+
+    <section class="row" id="row3">
+      <h2>Novidades</h2>
+      <div class="scroll-left" onclick="scrollRow('row3', 'left')">❮</div>
+      <div class="row_posters">
+        <img class="row_poster" src="img/small-movie1.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie2.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie3.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie4.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie5.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie6.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie7.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie8.jpg" alt=""/>
+      </div>
+      <div class="scroll-right" onclick="scrollRow('row3', 'right')">❯</div>
+    </section>
+
+    <section class="row" id="row4">
+      <h2>Comédia Romântica</h2>
+      <div class="scroll-left" onclick="scrollRow('row4', 'left')">❮</div>
+      <div class="row_posters">
+        <img class="row_poster" src="img/small-movie1.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie2.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie3.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie4.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie5.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie6.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie7.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie8.jpg" alt=""/>
+      </div>
+      <div class="scroll-right" onclick="scrollRow('row4', 'right')">❯</div>
+    </section>
+
+    <section class="row" id="row5">
+      <h2>Ação</h2>
+      <div class="scroll-left" onclick="scrollRow('row5', 'left')">❮</div>
+      <div class="row_posters">
+        <img class="row_poster" src="img/small-movie1.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie2.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie3.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie4.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie5.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie6.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie7.jpg" alt=""/>
+        <img class="row_poster" src="img/small-movie8.jpg" alt=""/>
+      </div>
+      <div class="scroll-right" onclick="scrollRow('row5', 'right')">❯</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+</html>
